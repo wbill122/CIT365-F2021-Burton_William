@@ -8,8 +8,7 @@ namespace MyFirstConsoleApplication3
 {
     class Person
     {
-        public string nam;
         public string location;
-        internal object name;
+        public string name;
     }
 }
