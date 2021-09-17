@@ -10,5 +10,6 @@ namespace MyFirstConsoleApplication3
     {
         public string nam;
         public string location;
+        internal object name;
     }
 }
