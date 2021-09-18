@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static MyFirstConsoleApplication3.GlazerApp;
+using static MyFirstConsoleApplication4.GlazerApp;
 
-namespace MyFirstConsoleApplication3
-
+namespace MyFirstConsoleApplication4
 {
     class Program
     {
@@ -15,10 +14,10 @@ namespace MyFirstConsoleApplication3
         {
             Person person = new Person();
 
-            Console.Write("What is your name?");
+            Console.Write("What is your name?  ");
             person.name = Console.ReadLine();
 
-            Console.Write($"Hi {person.name}!  Where are you from? ");
+            Console.Write($"Hi {person.name}!  Where are you from?  ");
             person.location = Console.ReadLine();
 
             Console.WriteLine($"I have never been to {person.location}.  I bet it is nice. ");
@@ -33,7 +32,7 @@ namespace MyFirstConsoleApplication3
         static void ChristmasCountdown(DateTime myDateTime)
         {
             Console.WriteLine($"Today's date is: {myDateTime:d}");
-            int daysUntilChristmas = ((TimeSpan) (new DateTime(myDateTime.Year, 12, 25) - myDateTime)).Days;
+            int daysUntilChristmas = ((TimeSpan)(new DateTime(myDateTime.Year, 12, 25) - myDateTime)).Days;
 
             Console.WriteLine($"There are {daysUntilChristmas} day until Christmas!");
             Console.WriteLine("Press any key to continue");
@@ -45,7 +44,7 @@ namespace MyFirstConsoleApplication3
         {
             GetUserNameAndLocation();
             ChristmasCountdown(DateTime.Now);
-           
+            GlazerApp.RunExample();
             Console.WriteLine("Press Any Key To Exit");
             Console.ReadKey();
 
@@ -53,8 +52,3 @@ namespace MyFirstConsoleApplication3
 
     }
 }
-
-    
-
-
-
