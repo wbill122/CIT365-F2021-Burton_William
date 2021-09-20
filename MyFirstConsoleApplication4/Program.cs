@@ -43,6 +43,7 @@ namespace MyFirstConsoleApplication4
         static void Main()
         {
             GetUserNameAndLocation();
+           
             ChristmasCountdown(DateTime.Now);
             GlazerApp.RunExample();
             Console.WriteLine("Press Any Key To Exit");
