@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace BurtonMathQuiz
 {
     public partial class Form1 : Form
     {
-        // Create a Random object called randomizer 
+        private SoundPlayer player = new SoundPlayer(@"C:\Windows\WinSxS\amd64_microsoft-windows-shell-sounds_31bf3856ad364e35_10.0.19041.1_none_cd0389b654e71da2\Alarm05.wav");
+     // Create a Random object called randomizer 
         // to generate random numbers.
         Random randomizer = new Random();
 
@@ -36,6 +38,7 @@ namespace BurtonMathQuiz
         int dividend;
         int divisor;
 
+        private string d = DateTime.Now.ToString();
         // This integer variable keeps track of the 
         // remaining time.
         int timeLeft;
@@ -111,7 +114,8 @@ namespace BurtonMathQuiz
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
+           
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -142,14 +146,22 @@ namespace BurtonMathQuiz
                     "Congratulations!");
                 startButton.Enabled = true;
             }
-            else if (timeLeft > 0)
+            if (timeLeft > 0)
             {
                 // If CheckTheAnswer() return false, keep counting
                 // down. Decrease the time left by one second and 
                 // display the new time left by updating the 
                 // Time Left label.
-                timeLeft--;
+                timeLeft = timeLeft -1;
                 timeLabel.Text = timeLeft + " seconds";
+                if (timeLeft < 6)
+                {
+                    timeLabel.ForeColor = Color.White;
+                    if (timeLeft == 5 - 0) timeLabel.BackColor = Color.Red;
+                    if(timeLeft == 5- 0) player.Play();
+
+
+                }
             }
             else
             {
@@ -179,6 +191,21 @@ namespace BurtonMathQuiz
         }
 
         private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sum_ValueChanged(object sender, EventArgs e)
+        {
+            //play
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
         {
 
         }

@@ -54,6 +54,8 @@ namespace BurtonMathQuiz
             this.label15 = new System.Windows.Forms.Label();
             this.startButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label5 = new System.Windows.Forms.Label();
+            this.dateTime = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.sum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.difference)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.product)).BeginInit();
@@ -64,9 +66,9 @@ namespace BurtonMathQuiz
             // 
             this.timeLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.timeLabel.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeLabel.Location = new System.Drawing.Point(280, 9);
+            this.timeLabel.Location = new System.Drawing.Point(368, 9);
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(200, 30);
+            this.timeLabel.Size = new System.Drawing.Size(208, 42);
             this.timeLabel.TabIndex = 0;
             this.timeLabel.AutoSizeChanged += new System.EventHandler(this.label1_Click);
             this.timeLabel.Click += new System.EventHandler(this.label1_Click);
@@ -75,7 +77,7 @@ namespace BurtonMathQuiz
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(140, 7);
+            this.label1.Location = new System.Drawing.Point(215, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(134, 32);
             this.label1.TabIndex = 1;
@@ -83,7 +85,6 @@ namespace BurtonMathQuiz
             // 
             // plusLeftLabel
             // 
-            this.plusLeftLabel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.plusLeftLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plusLeftLabel.Location = new System.Drawing.Point(50, 83);
             this.plusLeftLabel.Name = "plusLeftLabel";
@@ -96,7 +97,7 @@ namespace BurtonMathQuiz
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(128, 83);
+            this.label2.Location = new System.Drawing.Point(150, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 50);
             this.label2.TabIndex = 3;
@@ -106,7 +107,7 @@ namespace BurtonMathQuiz
             // plusRightLabel
             // 
             this.plusRightLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plusRightLabel.Location = new System.Drawing.Point(208, 83);
+            this.plusRightLabel.Location = new System.Drawing.Point(245, 83);
             this.plusRightLabel.Name = "plusRightLabel";
             this.plusRightLabel.Size = new System.Drawing.Size(60, 50);
             this.plusRightLabel.TabIndex = 4;
@@ -116,7 +117,7 @@ namespace BurtonMathQuiz
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(254, 88);
+            this.label4.Location = new System.Drawing.Point(311, 77);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 50);
             this.label4.TabIndex = 5;
@@ -126,16 +127,17 @@ namespace BurtonMathQuiz
             // sum
             // 
             this.sum.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sum.Location = new System.Drawing.Point(329, 88);
+            this.sum.Location = new System.Drawing.Point(413, 83);
             this.sum.Name = "sum";
             this.sum.Size = new System.Drawing.Size(125, 42);
             this.sum.TabIndex = 2;
+            this.sum.ValueChanged += new System.EventHandler(this.sum_ValueChanged);
             this.sum.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // difference
             // 
             this.difference.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.difference.Location = new System.Drawing.Point(329, 138);
+            this.difference.Location = new System.Drawing.Point(413, 155);
             this.difference.Name = "difference";
             this.difference.Size = new System.Drawing.Size(125, 42);
             this.difference.TabIndex = 3;
@@ -144,7 +146,7 @@ namespace BurtonMathQuiz
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(254, 185);
+            this.label3.Location = new System.Drawing.Point(311, 227);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 50);
             this.label3.TabIndex = 10;
@@ -154,7 +156,7 @@ namespace BurtonMathQuiz
             // minusRightLabel
             // 
             this.minusRightLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minusRightLabel.Location = new System.Drawing.Point(208, 138);
+            this.minusRightLabel.Location = new System.Drawing.Point(245, 149);
             this.minusRightLabel.Name = "minusRightLabel";
             this.minusRightLabel.Size = new System.Drawing.Size(60, 50);
             this.minusRightLabel.TabIndex = 9;
@@ -164,7 +166,7 @@ namespace BurtonMathQuiz
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(128, 130);
+            this.label6.Location = new System.Drawing.Point(150, 149);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 50);
             this.label6.TabIndex = 8;
@@ -174,7 +176,7 @@ namespace BurtonMathQuiz
             // minusLeftLabel
             // 
             this.minusLeftLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minusLeftLabel.Location = new System.Drawing.Point(50, 132);
+            this.minusLeftLabel.Location = new System.Drawing.Point(50, 155);
             this.minusLeftLabel.Name = "minusLeftLabel";
             this.minusLeftLabel.Size = new System.Drawing.Size(60, 50);
             this.minusLeftLabel.TabIndex = 7;
@@ -184,7 +186,7 @@ namespace BurtonMathQuiz
             // product
             // 
             this.product.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.product.Location = new System.Drawing.Point(329, 191);
+            this.product.Location = new System.Drawing.Point(413, 233);
             this.product.Name = "product";
             this.product.Size = new System.Drawing.Size(125, 42);
             this.product.TabIndex = 4;
@@ -193,7 +195,7 @@ namespace BurtonMathQuiz
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(254, 138);
+            this.label8.Location = new System.Drawing.Point(311, 149);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(60, 50);
             this.label8.TabIndex = 15;
@@ -203,7 +205,7 @@ namespace BurtonMathQuiz
             // timesRightLabel
             // 
             this.timesRightLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timesRightLabel.Location = new System.Drawing.Point(208, 185);
+            this.timesRightLabel.Location = new System.Drawing.Point(245, 227);
             this.timesRightLabel.Name = "timesRightLabel";
             this.timesRightLabel.Size = new System.Drawing.Size(60, 50);
             this.timesRightLabel.TabIndex = 14;
@@ -213,7 +215,7 @@ namespace BurtonMathQuiz
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(128, 185);
+            this.label10.Location = new System.Drawing.Point(150, 225);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(60, 50);
             this.label10.TabIndex = 13;
@@ -223,7 +225,7 @@ namespace BurtonMathQuiz
             // timesLeftLabel
             // 
             this.timesLeftLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timesLeftLabel.Location = new System.Drawing.Point(50, 185);
+            this.timesLeftLabel.Location = new System.Drawing.Point(50, 225);
             this.timesLeftLabel.Name = "timesLeftLabel";
             this.timesLeftLabel.Size = new System.Drawing.Size(60, 50);
             this.timesLeftLabel.TabIndex = 12;
@@ -234,7 +236,7 @@ namespace BurtonMathQuiz
             // quotient
             // 
             this.quotient.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quotient.Location = new System.Drawing.Point(329, 241);
+            this.quotient.Location = new System.Drawing.Point(413, 302);
             this.quotient.Name = "quotient";
             this.quotient.Size = new System.Drawing.Size(125, 42);
             this.quotient.TabIndex = 5;
@@ -243,7 +245,7 @@ namespace BurtonMathQuiz
             // dividedRightLabel
             // 
             this.dividedRightLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dividedRightLabel.Location = new System.Drawing.Point(208, 235);
+            this.dividedRightLabel.Location = new System.Drawing.Point(245, 292);
             this.dividedRightLabel.Name = "dividedRightLabel";
             this.dividedRightLabel.Size = new System.Drawing.Size(60, 50);
             this.dividedRightLabel.TabIndex = 20;
@@ -253,17 +255,18 @@ namespace BurtonMathQuiz
             // label13
             // 
             this.label13.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(128, 233);
+            this.label13.Location = new System.Drawing.Point(150, 296);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(60, 50);
             this.label13.TabIndex = 19;
-            this.label13.Text = "÷";
+            this.label13.Text = "/";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // dividedLeftLabel
             // 
             this.dividedLeftLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dividedLeftLabel.Location = new System.Drawing.Point(50, 235);
+            this.dividedLeftLabel.Location = new System.Drawing.Point(50, 292);
             this.dividedLeftLabel.Name = "dividedLeftLabel";
             this.dividedLeftLabel.Size = new System.Drawing.Size(60, 50);
             this.dividedLeftLabel.TabIndex = 18;
@@ -273,7 +276,7 @@ namespace BurtonMathQuiz
             // label15
             // 
             this.label15.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(254, 235);
+            this.label15.Location = new System.Drawing.Point(311, 294);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(60, 50);
             this.label15.TabIndex = 17;
@@ -284,7 +287,7 @@ namespace BurtonMathQuiz
             // 
             this.startButton.AutoSize = true;
             this.startButton.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.startButton.Location = new System.Drawing.Point(134, 323);
+            this.startButton.Location = new System.Drawing.Point(368, 381);
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(208, 46);
             this.startButton.TabIndex = 1;
@@ -297,13 +300,33 @@ namespace BurtonMathQuiz
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Arial", 15.75F);
+            this.label5.Location = new System.Drawing.Point(3, 372);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(359, 68);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Alarm Will Sound at 5 Seconds";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // dateTime
+            // 
+            this.dateTime.Location = new System.Drawing.Point(9, 26);
+            this.dateTime.Name = "dateTime";
+            this.dateTime.Size = new System.Drawing.Size(200, 22);
+            this.dateTime.TabIndex = 22;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(603, 449);
+            this.Controls.Add(this.dateTime);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.quotient);
             this.Controls.Add(this.dividedRightLabel);
@@ -331,7 +354,8 @@ namespace BurtonMathQuiz
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Burton Math Quiz";
+            this.Text = "Bill Burton Math Quiz";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.difference)).EndInit();
@@ -368,6 +392,8 @@ namespace BurtonMathQuiz
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker dateTime;
     }
 }
 
