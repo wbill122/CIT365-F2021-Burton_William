@@ -38,7 +38,7 @@ namespace BurtonMathQuiz
         int dividend;
         int divisor;
 
-        private string d = DateTime.Now.ToString();
+        DateTime date = DateTime.Today;
         // This integer variable keeps track of the 
         // remaining time.
         int timeLeft;
@@ -114,8 +114,8 @@ namespace BurtonMathQuiz
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-           
+            dateField.Text = date.ToString("dd MMMM yyyy");
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -157,10 +157,8 @@ namespace BurtonMathQuiz
                 if (timeLeft < 6)
                 {
                     timeLabel.ForeColor = Color.White;
-                    if (timeLeft == 5 - 0) timeLabel.BackColor = Color.Red;
+                    if(timeLeft == 5 - 0) timeLabel.BackColor = Color.Red;
                     if(timeLeft == 5- 0) player.Play();
-
-
                 }
             }
             else
@@ -197,7 +195,7 @@ namespace BurtonMathQuiz
 
         private void sum_ValueChanged(object sender, EventArgs e)
         {
-            //play
+            
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -206,6 +204,23 @@ namespace BurtonMathQuiz
         }
 
         private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateField_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click_1(object sender, EventArgs e)
         {
 
         }
