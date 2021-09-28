@@ -29,24 +29,24 @@ namespace MegaDesk_Burton
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAddNew = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonAddNew
             // 
-            this.button1.Location = new System.Drawing.Point(41, 32);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonAddNew.Location = new System.Drawing.Point(40, 33);
+            this.buttonAddNew.Name = "buttonAddNew";
+            this.buttonAddNew.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddNew.TabIndex = 0;
+            this.buttonAddNew.Text = "&Add New";
+            this.buttonAddNew.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(55, 62);
+            this.button2.Location = new System.Drawing.Point(40, 76);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
@@ -55,7 +55,7 @@ namespace MegaDesk_Burton
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(73, 113);
+            this.button3.Location = new System.Drawing.Point(41, 115);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 2;
@@ -79,7 +79,7 @@ namespace MegaDesk_Burton
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonAddNew);
             this.Name = "MainMenu";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -88,7 +88,7 @@ namespace MegaDesk_Burton
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAddNew;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
