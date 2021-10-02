@@ -46,6 +46,7 @@ namespace MegaDesk_Burton1
             this.label4 = new System.Windows.Forms.Label();
             this.comboBoxDesktopMaterial = new System.Windows.Forms.ComboBox();
             this.buttonDisplayQuote = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -173,7 +174,7 @@ namespace MegaDesk_Burton1
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(45, 267);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(159, 21);
+            this.label4.Size = new System.Drawing.Size(127, 17);
             this.label4.TabIndex = 15;
             this.label4.Text = "Desk Top Material:";
             // 
@@ -195,11 +196,21 @@ namespace MegaDesk_Burton1
             this.buttonDisplayQuote.UseVisualStyleBackColor = true;
             this.buttonDisplayQuote.Click += new System.EventHandler(this.buttonDisplayQuote_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(333, 24);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(46, 17);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "label8";
+            // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 360);
+            this.ClientSize = new System.Drawing.Size(800, 471);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.buttonDisplayQuote);
             this.Controls.Add(this.comboBoxDesktopMaterial);
             this.Controls.Add(this.label4);
@@ -244,5 +255,6 @@ namespace MegaDesk_Burton1
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBoxDesktopMaterial;
         private System.Windows.Forms.Button buttonDisplayQuote;
+        private System.Windows.Forms.Label label8;
     }
 }

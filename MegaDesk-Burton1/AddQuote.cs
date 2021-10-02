@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MegaDesk_Burton1
@@ -45,7 +39,7 @@ namespace MegaDesk_Burton1
 
         private void CustomerName_Validating(object sender, CancelEventArgs e)
         {
-            
+
         }
 
         private void buttonDisplayQuote_Click(object sender, EventArgs e)
@@ -66,5 +60,5 @@ namespace MegaDesk_Burton1
                     MessageBox.Show("Error creating DisplayQuote. Check values and try again.");
                 }
             }
+        }
     }
-}
