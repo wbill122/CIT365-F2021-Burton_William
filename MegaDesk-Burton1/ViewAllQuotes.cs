@@ -16,5 +16,11 @@ namespace MegaDesk_Burton1
         {
             InitializeComponent();
         }
+
+        private void buttonMainMenu_Click(object sender, EventArgs e)
+        {
+            Application.OpenForms[0].Show();
+            Close();
+        }
     }
 }
