@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0D8703C2-DBDE-4AD5-A465-94A2FC734746}</ProjectGuid>
+    <ProjectGuid>{0B2C0173-03BA-4472-80B4-1F0F522D74F9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>MegaDesk_Burton</RootNamespace>
-    <AssemblyName>MegaDesk-Burton</AssemblyName>
+    <RootNamespace>MegaDesk_Burton1</RootNamespace>
+    <AssemblyName>MegaDesk-Burton1</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -74,17 +74,14 @@
     <Compile Include="SearchQuotes.Designer.cs">
       <DependentUpon>SearchQuotes.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewAllOuotes.cs">
+    <Compile Include="ViewAllQuotes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewAllOuotes.Designer.cs">
-      <DependentUpon>ViewAllOuotes.cs</DependentUpon>
+    <Compile Include="ViewAllQuotes.Designer.cs">
+      <DependentUpon>ViewAllQuotes.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddQuote.resx">
       <DependentUpon>AddQuote.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DisplayQuote.resx">
-      <DependentUpon>DisplayQuote.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
@@ -98,9 +95,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SearchQuotes.resx">
-      <DependentUpon>SearchQuotes.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

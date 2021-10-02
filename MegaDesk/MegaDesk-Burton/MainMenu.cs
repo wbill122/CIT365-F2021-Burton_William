@@ -16,5 +16,11 @@ namespace MegaDesk_Burton
         {
             InitializeComponent();
         }
+        private void buttonAddNew_Click(object sender, EventArgs e)
+        {
+            buttonAddQuote addQuoteForm = new buttonAddQuote();
+            addQuoteForm.Show();
+            this.Hide();
+        }
     }
 }

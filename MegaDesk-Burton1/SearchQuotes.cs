@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MegaDesk_Burton
+namespace MegaDesk_Burton1
 {
-    public partial class buttonAddQuote : Form
+    public partial class SearchQuotes : Form
     {
-        public buttonAddQuote()
+        public SearchQuotes()
         {
             InitializeComponent();
         }
