@@ -15,6 +15,11 @@ namespace MegaDesk_Burton1
         public AddQuote()
         {
             InitializeComponent();
+            comboBoxNumberOfDrawers.Items.AddRange(Enum.GetNames(typeof(DesktopMaterial)));
+            comboBoxRushOrder.Items.Add("Normal (14 Days)");
+            comboBoxRushOrder.Items.Add("7 Days");
+            comboBoxRushOrder.Items.Add("5 Days");
+            comboBoxRushOrder.Items.Add("3 Days");
         }
 
         private void Width_Validating(object sender, CancelEventArgs e)
@@ -38,5 +43,28 @@ namespace MegaDesk_Burton1
             Close();
         }
 
+        private void CustomerName_Validating(object sender, CancelEventArgs e)
+        {
+            
+        }
+
+        private void buttonDisplayQuote_Click(object sender, EventArgs e)
+        {
+            if (ValidateChildren(ValidationConstraints.None))
+            {
+                try
+                {
+                    DisplayQuote displayQuote = new DisplayQuote();
+                    Desk myDesk = new Desk(int.Parse(TextBoxDeskWidth.Text), int.Parse(TextBoxDeskDepth.Text), int.Parse(TextBoxNumberOfDrawers.Text), ComboBoxDesktopMaterial.Text);
+                    DeskQuote myQuote = new DeskQuote(myDesk, ComboBoxRushOrder.Text, TextBoxCustomerName.Text, DateTimePickerOrderDate.Value);
+                    displayQuote.MyDeskQuote = myQuote;
+                    displayQuote.Show();
+                    Close();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Error creating DisplayQuote. Check values and try again.");
+                }
+            }
     }
 }

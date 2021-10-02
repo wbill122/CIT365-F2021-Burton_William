@@ -11,6 +11,7 @@ using System.Windows.Forms;
 namespace MegaDesk_Burton1
 {
     public partial class DisplayQuote : Form
+
     {
         public DisplayQuote()
         {
@@ -23,4 +24,5 @@ namespace MegaDesk_Burton1
             Close();
         }
     }
-}
+   
+    }
