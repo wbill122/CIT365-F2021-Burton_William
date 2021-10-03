@@ -9,7 +9,7 @@ namespace MegaDesk_Burton1
         public AddQuote()
         {
             InitializeComponent();
-            comboBoxNumberOfDrawers.Items.AddRange(Enum.GetNames(typeof(DesktopMaterial)));
+           
             comboBoxRushOrder.Items.Add("Normal (14 Days)");
             comboBoxRushOrder.Items.Add("7 Days");
             comboBoxRushOrder.Items.Add("5 Days");
