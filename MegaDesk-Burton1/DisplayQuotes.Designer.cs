@@ -1,7 +1,7 @@
 ﻿
 namespace MegaDesk_Burton1
 {
-    partial class AddQuote
+    partial class DisplayQuotes
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace MegaDesk_Burton1
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "AddQuote";
+            this.Text = "DisplayQuotes";
         }
 
         #endregion

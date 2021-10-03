@@ -17,32 +17,34 @@ namespace MegaDesk_Burton1
             InitializeComponent();
         }
 
-       
-        private void buttonAddNew_Click(object sender, EventArgs e)
+        private void addNewQuote_Click(object sender, EventArgs e)
         {
-            AddQuote addQuoteForm = new AddQuote();
-            addQuoteForm.Show();
-            this.Hide();
+            AddQuote openAddQuote = new AddQuote();
+            openAddQuote.Tag = this;
+            openAddQuote.Show(this);
+            Hide();
         }
 
-       
-        private void buttonViewQuotes_Click(object sender, EventArgs e)
+        private void viewQuote_Click(object sender, EventArgs e)
         {
-            ViewAllQuotes viewAllQuotesForm = new ViewAllQuotes();
-            viewAllQuotesForm.Show();
-            this.Hide();
-        }
-        private void buttonSearch_Click(object sender, EventArgs e)
-        {
-            SearchQuotes searchQuotesForm = new SearchQuotes();
-            searchQuotesForm.Show();
-            this.Hide();
+            ViewAllQuotes openViewAllQuotes = new ViewAllQuotes();
+            openViewAllQuotes.Tag = this;
+            openViewAllQuotes.Show(this);
+            Hide();
         }
 
-
-        private void buttonExit_Click(object sender, EventArgs e)
+        private void searchQuotes_Click(object sender, EventArgs e)
         {
-            this.Close();
+            SearchQuotes openSearchQuotes = new SearchQuotes();
+            openSearchQuotes.Tag = this;
+            openSearchQuotes.Show(this);
+            Hide();
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Close();
+            Application.Exit();
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MegaDesk_Burton1
+namespace MegaDesk_Burton01
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace MegaDesk_Burton1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainMenu());
+            Application.Run(new Form1());
         }
     }
 }

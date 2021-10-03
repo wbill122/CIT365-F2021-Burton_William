@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace MegaDesk_Burton1
 {
-    public partial class DisplayQuote : Form
-
+    public partial class DisplayQuotes : Form
     {
-        public DisplayQuote()
+        public DisplayQuotes()
         {
             InitializeComponent();
         }
-
-        private void buttonMainMenu_Click(object sender, EventArgs e)
-        {
-            Application.OpenForms[0].Show();
-            Close();
-        }
     }
-   
-    }
+}
