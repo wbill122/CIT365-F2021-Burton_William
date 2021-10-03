@@ -52,7 +52,7 @@
     <Compile Include="AddQuote.Designer.cs">
       <DependentUpon>AddQuote.cs</DependentUpon>
     </Compile>
-    <Compile Include="Desck.cs" />
+    <Compile Include="Desk.cs" />
     <Compile Include="DeskQuote.cs" />
     <Compile Include="DisplayQuotes.cs">
       <SubType>Form</SubType>
