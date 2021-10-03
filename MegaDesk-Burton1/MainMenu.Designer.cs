@@ -37,7 +37,7 @@ namespace MegaDesk_Burton1
             // 
             // buttonAddNew
             // 
-            this.buttonAddNew.Location = new System.Drawing.Point(8, 35);
+            this.buttonAddNew.Location = new System.Drawing.Point(8, 44);
             this.buttonAddNew.Name = "buttonAddNew";
             this.buttonAddNew.Size = new System.Drawing.Size(145, 23);
             this.buttonAddNew.TabIndex = 0;
@@ -47,7 +47,7 @@ namespace MegaDesk_Burton1
             // 
             // buttonViewQuotes
             // 
-            this.buttonViewQuotes.Location = new System.Drawing.Point(8, 80);
+            this.buttonViewQuotes.Location = new System.Drawing.Point(8, 99);
             this.buttonViewQuotes.Name = "buttonViewQuotes";
             this.buttonViewQuotes.Size = new System.Drawing.Size(145, 23);
             this.buttonViewQuotes.TabIndex = 1;
@@ -57,7 +57,7 @@ namespace MegaDesk_Burton1
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(8, 121);
+            this.buttonSearch.Location = new System.Drawing.Point(8, 143);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(145, 23);
             this.buttonSearch.TabIndex = 2;
@@ -67,7 +67,7 @@ namespace MegaDesk_Burton1
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(8, 161);
+            this.buttonExit.Location = new System.Drawing.Point(12, 379);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(145, 23);
             this.buttonExit.TabIndex = 3;

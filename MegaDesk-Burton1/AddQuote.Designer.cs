@@ -46,6 +46,7 @@ namespace MegaDesk_Burton1
             this.label4 = new System.Windows.Forms.Label();
             this.comboBoxDesktopMaterial = new System.Windows.Forms.ComboBox();
             this.buttonDisplayQuote = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -195,11 +196,22 @@ namespace MegaDesk_Burton1
             this.buttonDisplayQuote.UseVisualStyleBackColor = true;
             this.buttonDisplayQuote.Click += new System.EventHandler(this.buttonDisplayQuote_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(515, 147);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 471);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonDisplayQuote);
             this.Controls.Add(this.comboBoxDesktopMaterial);
             this.Controls.Add(this.label4);
@@ -244,5 +256,6 @@ namespace MegaDesk_Burton1
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBoxDesktopMaterial;
         private System.Windows.Forms.Button buttonDisplayQuote;
+        private System.Windows.Forms.Button button1;
     }
 }

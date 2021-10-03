@@ -9,7 +9,7 @@ namespace MegaDesk_Burton1
         public AddQuote()
         {
             InitializeComponent();
-           
+
             comboBoxRushOrder.Items.Add("Normal (14 Days)");
             comboBoxRushOrder.Items.Add("7 Days");
             comboBoxRushOrder.Items.Add("5 Days");
@@ -44,21 +44,13 @@ namespace MegaDesk_Burton1
 
         private void buttonDisplayQuote_Click(object sender, EventArgs e)
         {
-            if (ValidateChildren(ValidationConstraints.None))
-            {
-                try
-                {
-                    DisplayQuote displayQuote = new DisplayQuote();
-                    Desk myDesk = new Desk(int.Parse(TextBoxDeskWidth.Text), int.Parse(TextBoxDeskDepth.Text), int.Parse(TextBoxNumberOfDrawers.Text), ComboBoxDesktopMaterial.Text);
-                    DeskQuote myQuote = new DeskQuote(myDesk, ComboBoxRushOrder.Text, TextBoxCustomerName.Text, DateTimePickerOrderDate.Value);
-                    displayQuote.MyDeskQuote = myQuote;
-                    displayQuote.Show();
-                    Close();
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Error creating DisplayQuote. Check values and try again.");
-                }
-            }
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
+}
