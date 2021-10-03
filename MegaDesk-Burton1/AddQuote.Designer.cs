@@ -46,7 +46,6 @@ namespace MegaDesk_Burton1
             this.label4 = new System.Windows.Forms.Label();
             this.comboBoxDesktopMaterial = new System.Windows.Forms.ComboBox();
             this.buttonDisplayQuote = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -196,21 +195,11 @@ namespace MegaDesk_Burton1
             this.buttonDisplayQuote.UseVisualStyleBackColor = true;
             this.buttonDisplayQuote.Click += new System.EventHandler(this.buttonDisplayQuote_Click);
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(333, 24);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(140, 21);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Add Quote Form";
-            // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 471);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.buttonDisplayQuote);
             this.Controls.Add(this.comboBoxDesktopMaterial);
             this.Controls.Add(this.label4);
@@ -255,6 +244,5 @@ namespace MegaDesk_Burton1
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBoxDesktopMaterial;
         private System.Windows.Forms.Button buttonDisplayQuote;
-        private System.Windows.Forms.Label label8;
     }
 }
