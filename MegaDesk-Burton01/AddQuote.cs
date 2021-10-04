@@ -29,18 +29,7 @@ namespace MegaDesk_Burton01
         }
         public void validateCustomer(string input)
         {
-            /*if (String.IsNullOrEmpty(input))
-            {
-                errorLabel.Text = "Please enter you name";
-                customerNameBox.BackColor = Color.Tomato;
-                customerNameBox.Text = "";
-                this.ActiveControl = customerNameBox;
             }
-            else
-            {
-                errorLabel.Text = "";
-            }*/
-        }
         private void customerNameBox_Validating(object sender, CancelEventArgs e)
         {
             customerNameBox.BackColor = default(Color);

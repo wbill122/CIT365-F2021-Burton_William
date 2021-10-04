@@ -117,7 +117,7 @@ namespace MegaDesk_Burton01
             this.viewQuoteButton.Location = new System.Drawing.Point(564, 312);
             this.viewQuoteButton.Name = "viewQuoteButton";
             this.viewQuoteButton.Size = new System.Drawing.Size(138, 23);
-            this.viewQuoteButton.TabIndex = 7;
+            this.viewQuoteButton.TabIndex = 6;
             this.viewQuoteButton.Text = "Submit Quote";
             this.viewQuoteButton.UseVisualStyleBackColor = true;
             this.viewQuoteButton.Click += new System.EventHandler(this.viewQuoteButton_Click);
@@ -127,7 +127,7 @@ namespace MegaDesk_Burton01
             this.returnToMainMenu.Location = new System.Drawing.Point(564, 384);
             this.returnToMainMenu.Name = "returnToMainMenu";
             this.returnToMainMenu.Size = new System.Drawing.Size(138, 23);
-            this.returnToMainMenu.TabIndex = 8;
+            this.returnToMainMenu.TabIndex = 7;
             this.returnToMainMenu.Text = "Back To Main";
             this.returnToMainMenu.UseVisualStyleBackColor = true;
             this.returnToMainMenu.Click += new System.EventHandler(this.returnToMainMenu_Click);
@@ -137,7 +137,7 @@ namespace MegaDesk_Burton01
             this.customerNameBox.Location = new System.Drawing.Point(180, 84);
             this.customerNameBox.Name = "customerNameBox";
             this.customerNameBox.Size = new System.Drawing.Size(206, 22);
-            this.customerNameBox.TabIndex = 9;
+            this.customerNameBox.TabIndex = 0;
             this.customerNameBox.Validating += new System.ComponentModel.CancelEventHandler(this.customerNameBox_Validating);
             // 
             // widthBox
@@ -145,14 +145,14 @@ namespace MegaDesk_Burton01
             this.widthBox.Location = new System.Drawing.Point(180, 140);
             this.widthBox.Name = "widthBox";
             this.widthBox.Size = new System.Drawing.Size(206, 22);
-            this.widthBox.TabIndex = 10;
+            this.widthBox.TabIndex = 1;
             // 
             // depthBox
             // 
             this.depthBox.Location = new System.Drawing.Point(180, 192);
             this.depthBox.Name = "depthBox";
             this.depthBox.Size = new System.Drawing.Size(100, 22);
-            this.depthBox.TabIndex = 11;
+            this.depthBox.TabIndex = 2;
             // 
             // shippingBox
             // 
@@ -166,7 +166,7 @@ namespace MegaDesk_Burton01
             this.shippingBox.Location = new System.Drawing.Point(180, 317);
             this.shippingBox.Name = "shippingBox";
             this.shippingBox.Size = new System.Drawing.Size(120, 84);
-            this.shippingBox.TabIndex = 16;
+            this.shippingBox.TabIndex = 5;
             // 
             // drawerBox
             // 
@@ -183,7 +183,7 @@ namespace MegaDesk_Burton01
             this.drawerBox.Location = new System.Drawing.Point(180, 234);
             this.drawerBox.Name = "drawerBox";
             this.drawerBox.Size = new System.Drawing.Size(100, 24);
-            this.drawerBox.TabIndex = 17;
+            this.drawerBox.TabIndex = 3;
             // 
             // materialBox
             // 
@@ -198,7 +198,7 @@ namespace MegaDesk_Burton01
             this.materialBox.Location = new System.Drawing.Point(180, 283);
             this.materialBox.Name = "materialBox";
             this.materialBox.Size = new System.Drawing.Size(121, 24);
-            this.materialBox.TabIndex = 18;
+            this.materialBox.TabIndex = 4;
             // 
             // currentDate
             // 
