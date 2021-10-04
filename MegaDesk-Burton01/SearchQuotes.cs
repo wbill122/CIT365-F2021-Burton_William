@@ -16,5 +16,13 @@ namespace MegaDesk_Burton01
         {
             InitializeComponent();
         }
+
+        private void backToMain_Click(object sender, EventArgs e)
+        {
+            MainMenu openMainMenu = new MainMenu();
+            openMainMenu.Tag = this;
+            openMainMenu.Show(this);
+            Hide();
+        }
     }
 }

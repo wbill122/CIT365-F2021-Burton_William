@@ -29,12 +29,33 @@ namespace MegaDesk_Burton01
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.backToMain = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // backToMain
+            // 
+            this.backToMain.Location = new System.Drawing.Point(550, 352);
+            this.backToMain.Name = "backToMain";
+            this.backToMain.Size = new System.Drawing.Size(188, 50);
+            this.backToMain.TabIndex = 0;
+            this.backToMain.Text = "Back to Main Menu";
+            this.backToMain.UseVisualStyleBackColor = true;
+            this.backToMain.Click += new System.EventHandler(this.backToMain_Click);
+            // 
+            // ViewAllQuotes
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.backToMain);
+            this.Name = "ViewAllQuotes";
             this.Text = "ViewAllQuotes";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button backToMain;
     }
 }
