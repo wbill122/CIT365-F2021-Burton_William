@@ -25,6 +25,7 @@ namespace MyScriptureJournal.Pages.Scriptures
         public string SearchString { get; set; }
         // Requires using Microsoft.AspNetCore.Mvc.Rendering;
         public SelectList Book { get; set; } 
+        public SelectList Date { get; set; }
         [BindProperty(SupportsGet = true)]
         public string ScriptureBook { get; set; }
         public string BookSort { get; set; }
