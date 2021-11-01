@@ -23,7 +23,7 @@ namespace MyScriptureJournal.Pages.Scriptures
         public IList<Scripture> Scripture { get; set; }
         [BindProperty(SupportsGet = true)]
         public string SearchString { get; set; }
-        // Requires using Microsoft.AspNetCore.Mvc.Rendering;
+        
         public SelectList Book { get; set; } 
         public SelectList Date { get; set; }
         [BindProperty(SupportsGet = true)]
@@ -34,20 +34,23 @@ namespace MyScriptureJournal.Pages.Scriptures
 
         public async Task OnGetAsync(string sortOrder)
         {
-            // using System 
-            //BookSort = String.IsNullOrEmpty(sortOrder) ? "book_desc" : "";
-            DateSort = sortOrder == "Date" ? "date_desc" : "Date";
+           // using System 
+            BookSort = String.IsNullOrEmpty(sortOrder) ? "book_desc" : "";
             BookSort = sortOrder == "Book" ? "book_desc" : "Book";
-
+            DateSort = String.IsNullOrEmpty(sortOrder) ? "Date" : "";
+            DateSort = sortOrder == "Date" ? "date_desc" : "Date";
             IQueryable<Scripture> scriptureQuery = from s in _context.Scripture
                                                    select s;
 
             IQueryable<string> bookQuery = from m in _context.Scripture
                                            orderby m.Book
                                            select m.Book;
+            
 
             var scriptures = from m in _context.Scripture
                              select m;
+
+           
 
             if (!string.IsNullOrEmpty(SearchString))
             {
@@ -79,24 +82,9 @@ namespace MyScriptureJournal.Pages.Scriptures
             }
 
             Book = new SelectList(await bookQuery.Distinct().ToListAsync());//Book
-
+           
             Scripture = await scriptures.ToListAsync();
         }
     }
-    /*public class IndexModel : PageModel
-    {
-        private readonly MyScriptureJournal.Data.MyScriptureJournalContext _context;
-
-        public IndexModel(MyScriptureJournal.Data.MyScriptureJournalContext context)
-        {
-            _context = context;
-        }
-
-        public IList<Scripture> Scripture { get;set; }
-
-        public async Task OnGetAsync()
-        {
-            Scripture = await _context.Scripture.ToListAsync();
-        }
-    }*/
+   
 }

@@ -15,5 +15,6 @@ namespace MyScriptureJournal.Data
         }
 
         public DbSet<MyScriptureJournal.Models.Scripture> Scripture { get; set; }
+        public object Date { get; internal set; }
     }
 }

@@ -13,16 +13,16 @@
 </p>
 <form>
     <p>
-        <select asp-for="DateSort" asp-items="Model.Book">
+        <select asp-for="ScriptureBook" asp-items="Model.Book">
             <option value="">All</option>
         </select>
         &nbsp; Keyword: <input type="text" asp-for="SearchString" />
     </p>
     <p>
-        <select asp-for="DateSort" asp-items="Model.Date">
+        <select asp-for="Date" asp-items="Model.Date">
             <option value="">All</option>
         </select>
-        &nbsp; Keyword: <input type="text" asp-for="SearchString" />
+        &nbsp; Keyword: <input type="date" asp-for="SearchString" />
     </p>
     <p>
         <input type="submit" value="Filter" />
@@ -30,7 +30,7 @@
     </p>
 
 </form>
-    <</body>
+    </body>
 <table class="table">
     <thead>
         <tr>
