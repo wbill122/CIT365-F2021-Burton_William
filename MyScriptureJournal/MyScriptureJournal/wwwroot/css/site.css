@@ -8,10 +8,10 @@ a.navbar-brand {
 }
 
 img {
-    
+    border-block-color: chocolate;
     max-width: 700px;
-    max-height: 800px;
-    
+    max-height: 700px;
+    position: relative;
 }
 thead,
 tbody,
