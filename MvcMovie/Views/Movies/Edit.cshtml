@@ -7,8 +7,17 @@
 <h1>Edit</h1>
 
 <h4>Movie</h4>
+<div>
+    <a asp-action="Index">Back to List</a>
+
+</div>
+<div class="form-group">
+    <input type="submit" value="Save" class="btn btn-primary" />
+</div>
+
+
 <hr />
-<div class="row">
+<div id="rows" class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -34,16 +43,30 @@
                 <span asp-validation-for="Price" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <label asp-for="Rating" class="control-label"></label>
+                <input asp-for="Rating" class="form-control" />
+                <span asp-validation-for="Rating" class="text-danger"></span>
             </div>
+            <div class="form-group">
+                <label asp-for="ImagePath" class="control-label"></label>
+                <input asp-for="ImagePath" class="form-control" type="file" />
+            </div>
+            <div class="form-group">
+                <img src="~/images/@Html.DisplayFor(model => model.ImagePath)" class="img-thumbnail movieThumbnail" alt="Movie image for @Html.DisplayFor(model => model.Title)" />
+            </div>
+
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 
+<style>
+    #rows {
+        width: 100%;
+        padding-left: 50px;
+        padding-bottom: 50px;
+    }
+</style>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
