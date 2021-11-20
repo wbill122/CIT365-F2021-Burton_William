@@ -1,6 +1,9 @@
-﻿using ContosoUniversity.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.EntityFrameworkCore;
+using ContosoUniversity.Data;
+using ContosoUniversity.Models.SchoolViewModels;
 using Microsoft.Extensions.Logging;
+using ContosoUniversity.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -12,12 +15,24 @@ namespace ContosoUniversity.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly SchoolContext _context;
+        public HomeController(ILogger<HomeController> logger, SchoolContext context)
         {
             _logger = logger;
+            _context = context;
         }
-
+        public async Task<ActionResult> About()
+        {
+            IQueryable<EnrollmentDateGroup> data =
+                from student in _context.Students
+                group student by student.EnrollmentDate into dateGroup
+                select new EnrollmentDateGroup()
+                {
+                    EnrollmentDate = dateGroup.Key,
+                    StudentCount = dateGroup.Count()
+                };
+            return View(await data.AsNoTracking().ToListAsync());
+        }
         public IActionResult Index()
         {
             return View();
