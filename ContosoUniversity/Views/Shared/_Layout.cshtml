@@ -3,15 +3,45 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Contoso University</title>
+    <title>@ViewData["Title"] - VenCuler University</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <style>
+   
+        body {
+            font-family: url('https://fonts.googleapis.com/css2?family=Asap+Condensed&display=swap');
+            color: rgb(216 71 71);
+            font-weight: 400;
+            line-height: 1.58;
+            letter-spacing: -.003em;
+            font-size: 20px;
+            padding: 70px;
+        }
+
+        h1 {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 51px;
+            line-height: 1.15;
+            letter-spacing: -.02em;
+            color: rgba(0, 0, 0, 0.8);
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
 </head>
+
 <body>
     <header>
+        <style>
+    body {
+        background-color: #d6deb8;
+    }
+</style>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Contoso University</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">VenCuler University</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -49,7 +79,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2020 - Contoso University - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2020 - VenCuler University - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -57,4 +87,5 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>
