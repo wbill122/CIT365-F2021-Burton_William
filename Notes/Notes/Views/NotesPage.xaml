@@ -25,7 +25,7 @@
 
     <!-- Add an item to the toolbar -->
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add"
+        <ToolbarItem Text="New Note"
                      Clicked="OnAddClicked" />
     </ContentPage.ToolbarItems>
 
